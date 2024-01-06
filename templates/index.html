@@ -73,7 +73,7 @@
             var userPrompt = document.getElementById("prompt").value;
             document.getElementById("prompt").value='';
             pushUserPromptToConversationWindow(userPrompt)
-            await fetch('http://192.168.193.229:8000/prompt?prompt='+userPrompt)
+            await fetch('https://mygpt.titancloud.cloud/prompt?prompt='+userPrompt)
             .then(response=>response.json())
             .then(data => {
                 var promptResponse = data["message"]
